@@ -1,0 +1,8 @@
+OrderID,Region,Category,Quantity,Revenue,Date
+A101,North,Tools,4,230.0,2026-11-01
+A102,South,Books,2,105.0,2026-11-02
+A103,East,Tools,7,412.0,2026-11-04
+A104,North,Office,5,290.0,2026-11-05
+A105,West,Books,3,,2026-11-07
+A106,South,Office,1,49.0,2026-11-08
+A106,South,Office,1,49.0,2026-11-08

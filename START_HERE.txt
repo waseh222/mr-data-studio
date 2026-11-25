@@ -1,0 +1,39 @@
+INSIGHTFORGE ANALYTICS + AI STUDIO V2.0
+========================================
+
+FIRST INSTALL ON WINDOWS:
+1. Extract this ZIP.
+2. Double-click INSTALL_TO_D_DRIVE.bat.
+3. Open D:\InsightForge Analytics Studio.
+4. Double-click RUN_WINDOWS.bat.
+   - First launch requires Python 3.11+ and internet to install libraries.
+   - The app and virtual environment install on D:.
+   - It opens a desktop window when Edge WebView2 is available.
+
+USE THE SOFTWARE:
+1. Click Demo Data or Import Data.
+2. Open Analysis Workbench > Auto analysis > Run Analysis.
+3. Open Model Builder, choose a target column and press Train & Evaluate.
+4. Read TEST ACCURACY (%) for classification or R2, MAE, RMSE for regression.
+5. Use the LEFT-SIDE manual prediction form, change values, then click Predict.
+6. Visit Interactive Academy for lessons and quizzes.
+7. For Generative AI, install/run Ollama locally and download a model.
+   Run SET_OLLAMA_STORAGE_TO_D.bat BEFORE downloading models to keep large
+   LLM weights off C:. Restart Ollama after setting the storage path.
+8. For PDF/TXT document Q&A, use Document RAG; search works without Ollama.
+
+YOUR ORIGINAL C: FILES ARE NOT DELETED.
+D: installer copies the previous workspace when safe and keeps a backup.
+
+TO BUILD A WINDOWS EXECUTABLE:
+Double-click BUILD_WINDOWS_EXE.bat after successful installation.
+The built native desktop app will appear in the dist folder on D:.
+This ZIP contains source and installer scripts, NOT a precompiled EXE.
+
+TROUBLESHOOTING:
+- Python missing? Install Python 3.11 or 3.12 with PATH enabled.
+- WebView2 unavailable? Use RUN_WEB_VERSION.bat to open the local browser UI.
+- Port 8765 already in use? Close the first instance before starting another.
+- First startup fails? Keep the batch window open and read the error.
+
+Project notes and features: README.md

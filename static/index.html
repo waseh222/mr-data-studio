@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0a1020">
+<title>InsightForge | Analytics Studio</title>
+<link rel="stylesheet" href="/static/styles.css">
+<link rel="stylesheet" href="/static/studio_v2.css">
+<script defer src="/static/vendor/plotly.min.js"></script>
+<script defer src="/static/app.js"></script>
+<script defer src="/static/studio_v2.js"></script>
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand"><div class="brand-glyph">◈</div><div><div class="brand-text">InsightForge<span class="brand-dot">.</span></div><div class="brand-caption">ANALYTICS + AI STUDIO <span class="version">V2.0</span></div></div></div>
+    <div class="side-label">WORKSPACE</div>
+    <nav id="nav-main">
+      <button class="nav-item active" data-view="overview"><span class="ico">▦</span><span>Overview</span></button>
+      <button class="nav-item" data-view="data"><span class="ico">▤</span><span>Data Workspace</span></button>
+      <button class="nav-item" data-view="import"><span class="ico">↥</span><span>Data Sources</span></button>
+      <button class="nav-item" data-view="clean"><span class="ico">✦</span><span>Cleaning Studio</span></button>
+      <button class="nav-item" data-view="transform"><span class="ico">⇄</span><span>Transform &amp; Join</span></button>
+    </nav>
+    <div class="side-label">ANALYTICS TOOLS</div>
+    <nav id="nav-tools">
+      <button class="nav-item new-feature" data-view="analyst"><span class="ico">◫</span><span>Analysis Workbench</span><span class="new-pill">NEW</span></button>
+      <button class="nav-item" data-view="eda"><span class="ico">◎</span><span>Automatic EDA</span></button>
+      <button class="nav-item" data-view="charts"><span class="ico">▥</span><span>Visual Lab</span><span class="new-pill">13</span></button>
+      <button class="nav-item" data-view="stats"><span class="ico">∑</span><span>Statistics Lab</span></button>
+      <button class="nav-item" data-view="sql"><span class="ico">⌘</span><span>SQL Studio</span></button>
+    </nav>
+    <div class="side-label">AI + MACHINE LEARNING</div>
+    <nav id="nav-ai">
+      <button class="nav-item" data-view="ml"><span class="ico">◉</span><span>Model Builder</span><span class="new-pill">PRO</span></button>
+      <button class="nav-item" data-view="genai"><span class="ico">✳</span><span>Generative AI</span></button>
+      <button class="nav-item" data-view="knowledge"><span class="ico">▣</span><span>Document RAG</span></button>
+    </nav>
+    <div class="side-label">LEARN + MANAGE</div>
+    <nav id="nav-learn">
+      <button class="nav-item" data-view="academy"><span class="ico">✎</span><span>Interactive Academy</span></button>
+      <button class="nav-item" data-view="export"><span class="ico">⇩</span><span>Export Center</span></button>
+      <button class="nav-item" data-view="settings"><span class="ico">⚙</span><span>Settings & Storage</span></button>
+    </nav>
+    <div class="side-label side-dataset-label">MY DATASETS <button title="Add dataset" id="side-add">+</button></div>
+    <div id="dataset-list" class="dataset-list"><div class="muted small">No datasets yet</div></div>
+    <div class="sidebar-bottom">
+      <div class="local-indicator"><span class="pulse"></span>LOCAL & PRIVATE <span class="little-check">✓</span></div>
+      <div class="sidebar-note">Your data stays on this computer.</div>
+    </div>
+  </aside>
+  <div class="right">
+    <header class="topbar">
+      <button id="mobile-menu" title="Menu" class="icon-btn mobile-only">☰</button>
+      <div class="crumb"><span>Workspace</span><span class="slash">/</span><strong id="crumb-name">Overview</strong></div>
+      <div class="top-actions">
+        <span class="connected">● <span>ENGINE ONLINE</span></span>
+        <button class="icon-btn" id="theme-toggle" title="Toggle appearance">☼</button>
+        <button class="icon-btn" id="undo-btn" title="Undo last change">↶</button>
+        <button class="icon-btn" id="redo-btn" title="Redo last change">↷</button>
+        <button class="button ghost" id="demo-btn">◈ Demo Data</button>
+        <button class="button quick-top" id="top-analyze">▶ Analyze</button>
+        <button class="button primary" id="import-btn">＋ Import Data</button>
+        <input type="file" multiple hidden id="file-input" accept=".csv,.tsv,.txt,.xlsx,.xls,.xlsm,.json,.jsonl,.parquet,.sqlite,.db,.sqlite3,.zip">
+      </div>
+    </header>
+    <div class="page-scroll" id="page-scroll">
+      <div class="page-content" id="view-root">
+        <div class="loading"><div class="loading-ring"></div><p>Loading analytics workspace…</p></div>
+      </div>
+      <div class="footer"><span>◈ INSIGHTFORGE ANALYTICS STUDIO</span><span>Local processing · No cloud required</span></div>
+    </div>
+  </div>
+</div>
+<div id="toast-area" aria-live="polite"></div>
+<div id="modal-root" class="modal-root hidden"></div>
+</body>
+</html>
